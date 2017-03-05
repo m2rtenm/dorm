@@ -9,6 +9,25 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+
+    background: url(img/Background.jpg) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: inline-block;
+    font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    text-align:center;
+    width:100%;
+    height:100%;
+    font-family: "Roboto";
+
+
+}
+
+a.btn.btn-primary.btn-large{
+    padding: 18px 28px;
+    font-size: 22px; 
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

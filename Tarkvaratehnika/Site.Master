@@ -76,11 +76,12 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - DormMatch</p>
-            </footer>
+            
         </div>
+        <hr />
+        <footer>
+            <p style="padding-left: 15px; padding-right: 15px;">&copy; <%: DateTime.Now.Year %> - DormMatch</p>
+        </footer>
     </form>
 </body>
 </html>
