@@ -3,7 +3,14 @@
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+    <style>
+        a.brand {
+            content: url(../Content/img/brand.png);
+            max-width: 30%;
+        }
+    </style>
+    <a runat="server" href="~/" class="brand">DormMatch</a>
+    <h2><%: Title %></h2>
 
     <div class="row">
         <div class="col-md-8">
@@ -56,10 +63,6 @@
             </section>
         </div>
 
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
-        </div>
+       
     </div>
 </asp:Content>

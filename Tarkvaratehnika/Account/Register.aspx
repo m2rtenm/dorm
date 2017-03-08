@@ -1,11 +1,18 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Tarkvaratehnika.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+    <style>
+        a.brand {
+            content: url(../Content/img/brand.png);
+            max-width: 30%;
+        }
+    </style>
+    <a runat="server" href="~/" class="brand">DormMatch</a>
+    <h2><%: Title %></h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
-
+    
     <div class="form-horizontal">
         <h4>Create a new account</h4>
         <hr />
