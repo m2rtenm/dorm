@@ -13,7 +13,7 @@
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
     
-    <div class="form-horizontal">
+    <%--<div class="form-horizontal">
         <h4>Create a new account</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
@@ -32,7 +32,7 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
                     CssClass="text-danger" ErrorMessage="The password field is required." />
             </div>
-        </div>
+        </div>--%>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirm password</asp:Label>
             <div class="col-md-10">
