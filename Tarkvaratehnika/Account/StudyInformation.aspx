@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="StudyInformation.aspx.cs" Inherits="Tarkvaratehnika.Account.StudyInformation" %>
+﻿<%@ Page Title="Study Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="StudyInformation.aspx.cs" Inherits="Tarkvaratehnika.Account.StudyInformation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <div class="form-horizontal">
     <style>
@@ -30,7 +30,7 @@
                 <asp:DropDownList ID="Degree" runat="server">
                     <asp:ListItem>Bachelor's Degree</asp:ListItem>
                     <asp:ListItem>Master's Degree</asp:ListItem>
-                    <asp:ListItem>Doctoral Degree</asp:ListItem>
+                    <asp:ListItem>PhD</asp:ListItem>
                     <asp:ListItem>Graduate Degree</asp:ListItem>
                 </asp:DropDownList>
             </div>

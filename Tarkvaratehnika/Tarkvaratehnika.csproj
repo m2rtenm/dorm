@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AccountInformation.aspx" />
     <Content Include="Account\AboutYou.aspx" />
     <Content Include="Account\Account.aspx" />
     <Content Include="Account\AccountInformation.aspx" />
@@ -232,6 +233,7 @@
     <Content Include="Content\Roboto-Italic.ttf" />
     <Content Include="Content\Roboto-Regular.ttf" />
     <Content Include="Content\Roboto-Thin.ttf" />
+    <Content Include="AccountMaster.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Content\img\Background.jpg" />
     <Content Include="Content\img\brand.png" />
@@ -286,6 +288,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountInformation.aspx.cs">
+      <DependentUpon>AccountInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountInformation.aspx.designer.cs">
+      <DependentUpon>AccountInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountMaster.Master.cs">
+      <DependentUpon>AccountMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountMaster.Master.designer.cs">
+      <DependentUpon>AccountMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Account\AboutYou.aspx.cs">
       <DependentUpon>AboutYou.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
