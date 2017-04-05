@@ -11,6 +11,8 @@ namespace Tarkvaratehnika.Account
     {
         protected void Next_Form(object sender, EventArgs e)
         {
+
+
             Response.Redirect("Account/StudyInformation");
         }
     }

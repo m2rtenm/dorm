@@ -6,6 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using Tarkvaratehnika.Models;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace Tarkvaratehnika.Account
 {
@@ -17,6 +20,9 @@ namespace Tarkvaratehnika.Account
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
             IdentityResult result = manager.Create(user, Password.Text);
+
+            SqlConnection con = new SqlConnection();
+
             if (result.Succeeded)
             {
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771

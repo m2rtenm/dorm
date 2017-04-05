@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AboutYou.aspx.cs" Inherits="Tarkvaratehnika.Account.AboutYou" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="AboutYou.aspx.cs" Inherits="Tarkvaratehnika.Account.AboutYou" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <div class="form-horizontal">
         <style>
@@ -25,7 +25,7 @@
             </div>
      </div>
     <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="License" CssClass="col-md-2 control-label" Text="Do you have a driver's licencse?"></asp:Label>
+            <asp:Label runat="server" AssociatedControlID="License" CssClass="col-md-2 control-label" Text="Do you have a driver's license?"></asp:Label>
             <div class="col-md-10">
                 <asp:DropDownList ID="License" runat="server">
                     <asp:ListItem>No</asp:ListItem>
