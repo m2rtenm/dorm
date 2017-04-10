@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Study Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="StudyInformation.aspx.cs" Inherits="Tarkvaratehnika.Account.StudyInformation" %>
+﻿<%@ Page Title="Study Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudyInformation.aspx.cs" Inherits="Tarkvaratehnika.Account.StudyInformation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <div class="form-horizontal">
     <style>
@@ -57,7 +57,7 @@
      </div> 
     <div class="form-group">
          <div class="col-md-offset-2 col-md-10">
-                <asp:Button ID="Button1" runat="server" Text="Next" />
+                <asp:Button ID="Button1" runat="server" Text="Next" OnClick="Button1_Click" />
          </div>
     </div>
 </div>

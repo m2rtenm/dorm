@@ -78,7 +78,7 @@
      </div> 
      <div class="form-group">
          <div class="col-md-offset-2 col-md-10">
-                <asp:Button ID="Button1" runat="server" Text="Next" />
+                <asp:Button ID="Button1" runat="server" Text="Next" OnClick="Button1_Click"/>
          </div>
      </div>
 </div>

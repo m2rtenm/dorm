@@ -9,6 +9,8 @@ using Tarkvaratehnika.Models;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace Tarkvaratehnika.Account
 {
@@ -16,6 +18,7 @@ namespace Tarkvaratehnika.Account
     {
         protected void CreateUser_Click(object sender, EventArgs e)
         {
+            /*
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
@@ -36,7 +39,25 @@ namespace Tarkvaratehnika.Account
             else 
             {
                 ErrorMessage.Text = result.Errors.FirstOrDefault();
+            }*/
+
+            byte[] hs = new byte[50];
+            string pass = Password.Text;
+            MD5 md5 = MD5.Create();
+            byte[] inputBytes = Encoding.ASCII.GetBytes(pass);
+            byte[] hash = md5.ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                hs[i] = hash[i];
+                sb.Append(hs[i].ToString("x2"));
             }
+            var hash_pass = sb.ToString();
+            
+            Session["email"] = Email.Text;
+            Session["password"] = hash_pass;
+            Session["username"] = Email.Text;
+            Response.Redirect("~/Account/PersonalInformation.aspx");
         }
     }
 }

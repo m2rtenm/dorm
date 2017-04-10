@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Personal Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="PersonalInformation.aspx.cs" Inherits="Tarkvaratehnika.Account.PersonalInformation" %>
+﻿<%@ Page Title="Personal Information" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PersonalInformation.aspx.cs" Inherits="Tarkvaratehnika.Account.PersonalInformation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 <div class="form-horizontal">
@@ -17,9 +17,15 @@
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
        <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Name" CssClass="col-md-2 control-label">Full Name</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="FirstName" CssClass="col-md-2 control-label">First Name</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Name" CssClass="form-control" />
+                <asp:TextBox runat="server" ID="FirstName" CssClass="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="LastName" CssClass="col-md-2 control-label">Last Name</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="LastName" CssClass="form-control" />
             </div>
         </div>
         <div class="form-group">
@@ -50,7 +56,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button ID="Button1" runat="server" Text="Next" OnClick="Next_Form" />
+                <asp:Button ID="Next" runat="server" Text="Next" OnClick="Next_Form"/>
             </div>
         </div>
 
