@@ -1,0 +1,62 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Personal.aspx.cs" Inherits="Tarkvaratehnika.Account.Personal" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="form-horizontal">
+        <style>
+        a.brand {
+            content: url(../Content/img/brand.png);
+            max-width: 30%;
+        }
+    </style>
+    <a runat="server" href="~/" class="brand">DormMatch</a>
+    <p class="text-danger">
+        <asp:Literal runat="server" ID="ErrorMessage" />
+    </p>
+        <h4>Please fill in some information about yourself!</h4>
+        <h5>Step 1: Personal Information</h5>
+        <hr />
+        <asp:ValidationSummary runat="server" CssClass="text-danger" />
+       <div class="form-group">
+           <asp:Label runat="server" AssociatedControlID="FirstName" CssClass="col-md-2 control-label" Text="First Name"></asp:Label>
+           <div class="col-md-10">
+               <asp:TextBox runat="server" ID="FirstName" CssClass="form-control" />
+           </div>
+       </div>
+        <div class="form-group">
+           <asp:Label runat="server" AssociatedControlID="LastName" CssClass="col-md-2 control-label" Text="Last Name"></asp:Label>
+           <div class="col-md-10">
+               <asp:TextBox runat="server" ID="LastName" CssClass="form-control" />
+           </div>
+       </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="BirthDate" CssClass="col-md-2 control-label" Text="Birth Date"></asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="BirthDate" CssClass="form-control" TextMode="Date"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Citizenship" CssClass="col-md-2 control-label" Text="Country of Citizenship"></asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="Citizenship" CssClass="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="City" CssClass="col-md-2 control-label" Text="City of Origin"></asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="City" CssClass="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label ID="Gender" runat="server" AssociatedControlID="Gender" CssClass="col-md-2 control-label">Gender</asp:Label>
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server"> 
+                <asp:ListItem>Female</asp:ListItem>
+                <asp:ListItem>Male</asp:ListItem>
+            </asp:RadioButtonList>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <asp:Button ID="Next" runat="server" Text="Next" OnClick="Next_Click"/>
+            </div>
+        </div>
+    </div>
+
+</asp:Content>
