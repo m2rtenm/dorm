@@ -49,7 +49,7 @@
         <div class="form-group">
             <asp:Label ID="Gender" runat="server" AssociatedControlID="Gender" CssClass="col-md-2 control-label">Gender</asp:Label>
 
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server"> 
+            <asp:RadioButtonList ID="GenderList" runat="server"> 
                 <asp:ListItem>Female</asp:ListItem>
                 <asp:ListItem>Male</asp:ListItem>
             </asp:RadioButtonList>

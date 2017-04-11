@@ -17,7 +17,7 @@ namespace Tarkvaratehnika.Account
             Session["birthdate"] = BirthDate.Text;
             Session["citizenship"] = Citizenship.Text;
             Session["city"] = City.Text;
-            Session["gender"] = Gender.Text;
+            Session["gender"] = GenderList.Text;
             Response.Redirect("~/Account/StudyInformation.aspx");
         }
     }
