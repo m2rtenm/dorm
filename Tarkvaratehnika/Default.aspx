@@ -87,7 +87,12 @@ body {
                       <div class="col-md-4">
                       </div>
                       <div class="col-md-4">
-                         <a runat="server" href="~/Account/Register" class="btn btn-primary btn-large ">Find Roommate</a>
+                         <a runat="server" href="~/Account/Register" class="btn btn-primary btn-large ">Register</a>
+                      </div>
+                       <div class="col-md-4">
+                      </div>
+                       <div class="col-md-4">
+                         <a runat="server" href="~/Account/Login" class="btn btn-primary btn-large ">Login</a>
                       </div>
                    </div>
                 </div>

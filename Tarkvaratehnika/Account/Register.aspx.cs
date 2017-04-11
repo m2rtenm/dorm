@@ -53,11 +53,23 @@ namespace Tarkvaratehnika.Account
                 sb.Append(hs[i].ToString("x2"));
             }
             var hash_pass = sb.ToString();
-            
-            Session["email"] = Email.Text;
-            Session["password"] = hash_pass;
-            Session["username"] = Email.Text;
-            Response.Redirect("~/Account/PersonalInformation.aspx");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select COUNT(*) FROM Registration WHERE Email='" + Email.Text + "'");
+            cmd.Connection = con;
+            int obj = Convert.ToInt32(cmd.ExecuteScalar());
+            if (obj > 0)
+            {
+                ErrorMessage.Text = "This email has already been taken! Choose another one!";
+            }
+            else
+            {
+                Session["email"] = Email.Text;
+                Session["password"] = hash_pass;
+                Session["username"] = Email.Text;
+                Response.Redirect("~/Account/PersonalInformation.aspx");
+            }
+
         }
     }
 }
