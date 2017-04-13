@@ -12,7 +12,7 @@
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
         <h4>Please fill in some information about yourself!</h4>
-        <h5>Step 5: Personality</h5>
+        <h5>Step 4: Personality</h5>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
     

@@ -11,7 +11,16 @@ namespace Tarkvaratehnika.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["name"] != null)
+            {
+                Username.Text = Session["name"].ToString();
+            }
+        }
 
+        protected void LogOutButton_Click(object sender, EventArgs e)
+        {
+            Session.Remove("user");
+            Response.Redirect("~/");
         }
     }
 }

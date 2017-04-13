@@ -42,7 +42,7 @@ namespace Tarkvaratehnika.Account
                 cmd.Parameters.AddWithValue("q", Session["personality"]);
 
                 cmd.ExecuteNonQuery();
-
+                Session.RemoveAll();
 
                 Response.Redirect("~/Account/Login.aspx");
                 con.Close();
