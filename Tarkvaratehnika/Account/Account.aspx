@@ -27,9 +27,19 @@
     <div class="form-horizontal">
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Welcome" ID="Welcome">Welcome, </asp:Label> <asp:Label runat="server" AssociatedControlID ="Username" ID="Username"></asp:Label>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SQL">
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SQL" runat="server"></asp:SqlDataSource>
         </div>
         <div class="form-group">
             <asp:Button runat="server" ID="LogOutButton" OnClick="LogOutButton_Click" Text="Logout" />
         </div> 
+        <div class="form-group">
+
+        </div>
     </div>
 </asp:Content>

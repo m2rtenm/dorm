@@ -2,33 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Tarkvaratehnika.Models;
-using System.Data.SqlClient;
+using System.Collections;
 
-namespace Tarkvaratehnika.Account
+namespace Tarkvaratehnika.Models
 {
-    public partial class Account : System.Web.UI.Page
+    public class Algoritm
     {
-        protected void Page_Load(object sender, EventArgs e)
+        public static void DoDictionaries()
         {
-            if (Session["name"] != null)
-            {
-                Username.Text = Session["name"].ToString();
-            }
-        }
-
-        protected void LogOutButton_Click(object sender, EventArgs e)
-        {
-            Session.Remove("user");
-            Response.Redirect("~/");
-        }
-
-        public void AlgoritmVoid()
-        {
-            int MatchPercent = 0;
-
             var campaignerTuple = new Tuple<string, string>("Advocate", "Architect");
             var defenderTuple = new Tuple<string, string>("Entertainer", "Entrepreneur");
             var adventurerTuple = new Tuple<string, string>("Executive", "Consul");
@@ -80,9 +61,11 @@ namespace Tarkvaratehnika.Account
             advocate.Add("Advocate", advocateTuple);
             debater.Add("Debater", debaterTuple);
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT FirstName, Personality FROM Registration WHERE");
-        }
+            
+        }    
+
     }
+
+
+
 }
