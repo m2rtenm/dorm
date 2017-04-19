@@ -30,19 +30,6 @@
         </div>
         <div class="form-group">
             <asp:Button runat="server" ID="LogOutButton" OnClick="LogOutButton_Click" Text="Logout" />
-        </div>
-        <asp:GridView runat="server" AutoGenerateColumns="False" DataSourceID="Andmebaas" >
-            <Columns>
-                <asp:CommandField ShowSelectButton="True" />
-                <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="Andmebaas" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT [FirstName] FROM [Registration] WHERE ([Email] &lt;&gt; @Email)">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="Username" Name="Email" PropertyName="Text" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
+        </div> 
     </div>
-
-
 </asp:Content>

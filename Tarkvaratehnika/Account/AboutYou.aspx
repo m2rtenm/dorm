@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="AboutYou.aspx.cs" Inherits="Tarkvaratehnika.Account.AboutYou" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AboutYou.aspx.cs" Inherits="Tarkvaratehnika.Account.AboutYou" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <div class="form-horizontal">
         <style>
@@ -59,23 +59,61 @@
             </div>
      </div>
     <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="MusicArtists" CssClass="col-md-2 control-label" Text="List your 3 favourite music artists"></asp:Label>
+            <asp:Label runat="server" AssociatedControlID="MusicArtists1" CssClass="col-md-2 control-label" Text="Name your first favourite music artist"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="MusicArtists" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="MusicArtists1" CssClass="form-control" />
+            </div>
+     </div>
+    <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="MusicArtists2" CssClass="col-md-2 control-label" Text="Name your second favourite music artist"></asp:Label>
+            <div class="col-md-10">
+                 <asp:TextBox runat="server" ID="MusicArtists2" CssClass="form-control" />
+            </div>
+     </div>
+    <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="MusicArtists3" CssClass="col-md-2 control-label" Text="Name your third favourite music artist"></asp:Label>
+            <div class="col-md-10">
+                 <asp:TextBox runat="server" ID="MusicArtists3" CssClass="form-control" />
             </div>
      </div> 
     <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Movies" CssClass="col-md-2 control-label" Text="List your 3 favourite movies"></asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Movies1" CssClass="col-md-2 control-label" Text="Name your first favourite movie"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="Movies" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="Movies1" CssClass="form-control" />
+            </div>
+     </div>
+    <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Movies2" CssClass="col-md-2 control-label" Text="Name your second favourite movie"></asp:Label>
+            <div class="col-md-10">
+                 <asp:TextBox runat="server" ID="Movies2" CssClass="form-control" />
+            </div>
+     </div>
+    <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Movies3" CssClass="col-md-2 control-label" Text="Name your third favourite movie"></asp:Label>
+            <div class="col-md-10">
+                 <asp:TextBox runat="server" ID="Movies3" CssClass="form-control" />
             </div>
      </div> 
     <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="TVseries" CssClass="col-md-2 control-label" Text="List your 3 favourite TV series"></asp:Label>
+            <asp:Label runat="server" AssociatedControlID="TVseries1" CssClass="col-md-2 control-label" Text="Name your first favourite TV series"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="TVseries" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="TVseries1" CssClass="form-control" />
+            </div>
+     </div>
+    <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="TVseries2" CssClass="col-md-2 control-label" Text="Name your second favourite TV series"></asp:Label>
+            <div class="col-md-10">
+                 <asp:TextBox runat="server" ID="TVseries2" CssClass="form-control" />
             </div>
      </div> 
+
+    <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="TVseries3" CssClass="col-md-2 control-label" Text="Name your third favourite TV series"></asp:Label>
+            <div class="col-md-10">
+                 <asp:TextBox runat="server" ID="TVseries3" CssClass="form-control" />
+            </div>
+     </div> 
+ 
      <div class="form-group">
          <div class="col-md-offset-2 col-md-10">
                 <asp:Button ID="Button1" runat="server" Text="Next" OnClick="Button1_Click"/>

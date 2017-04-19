@@ -22,7 +22,7 @@ namespace Tarkvaratehnika.Account
                 Session["personality"] = PersonalityType.Text;
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Registration (Email, Password, UserName, FirstName, LastName, DateOfBirth, Citizenship, City, Gender, Relationship, DriverLicense, Cooking, Party, Music, Movie, TV, Personality) values (@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k, @l, @m, @n, @o, @p, @q)", con);
+                SqlCommand cmd = new SqlCommand("insert into Registration (Email, Password, UserName, FirstName, LastName, DateOfBirth, Citizenship, City, Gender, Relationship, DriverLicense, Cooking, Party, Music1, Music2, Music3, Movie1, Movie2, Movie3, TV1, TV2, TV3, Personality) values (@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k, @l, @m, @n, @o, @p, @q, @r, @s, @t, @u, @v, @w)", con);
                 cmd.Parameters.AddWithValue("a", Session["email"]);
                 cmd.Parameters.AddWithValue("b", Session["password"]);
                 cmd.Parameters.AddWithValue("c", Session["username"]);
@@ -36,10 +36,16 @@ namespace Tarkvaratehnika.Account
                 cmd.Parameters.AddWithValue("k", Session["license"]);
                 cmd.Parameters.AddWithValue("l", Session["cooking"]);
                 cmd.Parameters.AddWithValue("m", Session["party"]);
-                cmd.Parameters.AddWithValue("n", Session["music"]);
-                cmd.Parameters.AddWithValue("o", Session["movies"]);
-                cmd.Parameters.AddWithValue("p", Session["tv"]);
-                cmd.Parameters.AddWithValue("q", Session["personality"]);
+                cmd.Parameters.AddWithValue("n", Session["music1"]);
+                cmd.Parameters.AddWithValue("o", Session["music2"]);
+                cmd.Parameters.AddWithValue("p", Session["music3"]);
+                cmd.Parameters.AddWithValue("q", Session["movies1"]);
+                cmd.Parameters.AddWithValue("r", Session["movies2"]);
+                cmd.Parameters.AddWithValue("s", Session["movies3"]);
+                cmd.Parameters.AddWithValue("t", Session["tv1"]);
+                cmd.Parameters.AddWithValue("u", Session["tv2"]);
+                cmd.Parameters.AddWithValue("v", Session["tv3"]);
+                cmd.Parameters.AddWithValue("w", Session["personality"]);
 
                 cmd.ExecuteNonQuery();
                 Session.RemoveAll();

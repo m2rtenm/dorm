@@ -58,31 +58,85 @@ namespace Tarkvaratehnika.Account {
         protected global::System.Web.UI.WebControls.DropDownList Party;
         
         /// <summary>
-        /// MusicArtists control.
+        /// MusicArtists1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MusicArtists;
+        protected global::System.Web.UI.WebControls.TextBox MusicArtists1;
         
         /// <summary>
-        /// Movies control.
+        /// MusicArtists2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Movies;
+        protected global::System.Web.UI.WebControls.TextBox MusicArtists2;
         
         /// <summary>
-        /// TVseries control.
+        /// MusicArtists3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TVseries;
+        protected global::System.Web.UI.WebControls.TextBox MusicArtists3;
+        
+        /// <summary>
+        /// Movies1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Movies1;
+        
+        /// <summary>
+        /// Movies2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Movies2;
+        
+        /// <summary>
+        /// Movies3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Movies3;
+        
+        /// <summary>
+        /// TVseries1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TVseries1;
+        
+        /// <summary>
+        /// TVseries2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TVseries2;
+        
+        /// <summary>
+        /// TVseries3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TVseries3;
         
         /// <summary>
         /// Button1 control.

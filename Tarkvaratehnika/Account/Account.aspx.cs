@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Tarkvaratehnika.Models;
 
 namespace Tarkvaratehnika.Account
 {
@@ -21,6 +22,12 @@ namespace Tarkvaratehnika.Account
         {
             Session.Remove("user");
             Response.Redirect("~/");
+        }
+
+        public void AlgoritmVoid()
+        {
+            int MatchPercent = 0;
+
         }
     }
 }
