@@ -10,11 +10,12 @@
     <a runat="server" href="~/" class="brand">DormMatch</a>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
+        
     </p>
         <h4>Please fill in some information about yourself!</h4>
         <h5>Step 3: About you</h5>
         <hr />
-        <asp:ValidationSummary runat="server" CssClass="text-danger" />
+        
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Relationship" CssClass="col-md-2 control-label" Text="Are you in a relationship?"></asp:Label>
             <div class="col-md-10">
@@ -61,56 +62,56 @@
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="MusicArtists1" CssClass="col-md-2 control-label" Text="Name your first favourite music artist"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="MusicArtists1" CssClass="form-control" />
-            </div>
+                <asp:TextBox runat="server" ID="MusicArtists1" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MusicArtists1" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
+                   </div>
      </div>
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="MusicArtists2" CssClass="col-md-2 control-label" Text="Name your second favourite music artist"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="MusicArtists2" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="MusicArtists2" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MusicArtists2" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div>
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="MusicArtists3" CssClass="col-md-2 control-label" Text="Name your third favourite music artist"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="MusicArtists3" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="MusicArtists3" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MusicArtists3" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div> 
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Movies1" CssClass="col-md-2 control-label" Text="Name your first favourite movie"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="Movies1" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="Movies1" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="Movies1" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div>
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Movies2" CssClass="col-md-2 control-label" Text="Name your second favourite movie"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="Movies2" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="Movies2" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="Movies2" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div>
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Movies3" CssClass="col-md-2 control-label" Text="Name your third favourite movie"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="Movies3" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="Movies3" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="Movies3" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div> 
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="TVseries1" CssClass="col-md-2 control-label" Text="Name your first favourite TV series"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="TVseries1" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="TVseries1" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TVseries1" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div>
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="TVseries2" CssClass="col-md-2 control-label" Text="Name your second favourite TV series"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="TVseries2" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="TVseries2" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="TVseries2" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div> 
 
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="TVseries3" CssClass="col-md-2 control-label" Text="Name your third favourite TV series"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="TVseries3" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="TVseries3" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="TVseries3" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div> 
  
@@ -121,4 +122,5 @@
      </div>
 </div>
 
+    </div>
 </asp:Content>

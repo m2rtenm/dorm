@@ -14,7 +14,7 @@
         <h4>Please fill in some information about yourself!</h4>
         <h5>Step 2: Information about your studies</h5>
         <hr />
-        <asp:ValidationSummary runat="server" CssClass="text-danger" />
+        
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="University" CssClass="col-md-2 control-label" Text="University"></asp:Label>
             <div class="col-md-10">
@@ -52,7 +52,7 @@
     <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="StudyField" CssClass="col-md-2 control-label" Text="Field of Study"></asp:Label>
             <div class="col-md-10">
-                 <asp:TextBox runat="server" ID="StudyField" CssClass="form-control" />
+                 <asp:TextBox runat="server" ID="StudyField" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="StudyField" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div> 
     <div class="form-group">
