@@ -8,7 +8,7 @@ namespace Tarkvaratehnika.Models
 {
     public class Algoritm
     {
-        public static void DoDictionaries()
+        public static void DoDictionariesWithTuples()
         {
             var campaignerTuple = new Tuple<string, string>("Advocate", "Architect");
             var defenderTuple = new Tuple<string, string>("Entertainer", "Entrepreneur");
@@ -60,12 +60,69 @@ namespace Tarkvaratehnika.Models
             protagonist.Add("Protagonist", protagonistTuple);
             advocate.Add("Advocate", advocateTuple);
             debater.Add("Debater", debaterTuple);
-
-            
         }    
 
+        public static void DoDictionaryWithLists()
+        {
+            List<string> campaigner = new List<string>() { "Advocate", "Arhitect" };
+            List<string> defender = new List<string>() { "Entertainer", "Entrepreneur" };
+            List<string> adventurer = new List<string>() { "Executive", "Consul" };
+            List<string> logistician = new List<string>() { "Entrepreneur", "Entertainer" };
+            List<string> virtuoso = new List<string>() { "Consul", "Executive" };
+            List<string> mediator = new List<string>() { "Protagonist", "Commander" };
+            List<string> architect = new List<string>() { "Debater", "Campaigner" };
+            List<string> logician = new List<string>() { "Commander", "Protagonist" };
+            List<string> entrepreneur = new List<string>() { "Logistician", "Defender" };
+            List<string> consul = new List<string>() { "Adventurer", "Virtuoso" };
+            List<string> entertainer = new List<string>() { "Logistician", "Defender" };
+            List<string> executive = new List<string>() { "Virtuoso", "Adventurer" };
+            List<string> commander = new List<string>() { "Logician", "Mediator" };
+            List<string> protagonist = new List<string>() { "Mediator", "Logician" };
+            List<string> advocate = new List<string>() { "Campaigner", "Debater", "Architect" };
+            List<string> debater = new List<string>() { "Consul", "Protagonist", "Defender", "Architect", "Advocate" };
+
+            Dictionary<string, List<string>> dictWithLists = new Dictionary<string, List<string>>();
+            dictWithLists.Add("Campaigner", campaigner);
+            dictWithLists.Add("Defender", defender);
+            dictWithLists.Add("Adventurer", adventurer);
+            dictWithLists.Add("Logistician", logistician);
+            dictWithLists.Add("Virtuoso", virtuoso);
+            dictWithLists.Add("Mediator", mediator);
+            dictWithLists.Add("Architect", architect);
+            dictWithLists.Add("Logician", logician);
+            dictWithLists.Add("Entrepreneur", entrepreneur);
+            dictWithLists.Add("Executive", executive);
+            dictWithLists.Add("Commander", commander);
+            dictWithLists.Add("Protagonist", protagonist);
+            dictWithLists.Add("Advocate", advocate);
+            dictWithLists.Add("Debater", debater);
+        }
+        public enum Personalities
+        {
+            Campaigner, 
+            Defender,
+            Adventurer,
+            Logistician,
+            Virtuoso,
+            Mediator,
+            Architect,
+            Logician,
+            Entrepreneur,
+            Executive,
+            Commander,
+            Protagonist,
+            Advocate,
+            Debater
+        }
+
+        //private static Hashtable<Personalities, List<Personalities> relations = new Hashtable();
+        public static void DoSomethingWithEnums()
+        {
+
+        }
     }
 
+    
 
 
 }

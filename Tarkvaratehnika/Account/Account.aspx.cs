@@ -17,6 +17,10 @@ namespace Tarkvaratehnika.Account
             {
                 Username.Text = Session["name"].ToString();
             }
+            else
+            {
+                Response.Redirect("~/");
+            }
         }
 
         protected void LogOutButton_Click(object sender, EventArgs e)
