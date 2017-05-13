@@ -220,6 +220,15 @@ namespace Tarkvaratehnika.Account {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
         
         /// <summary>
+        /// Bio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea Bio;
+        
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>

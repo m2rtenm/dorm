@@ -114,6 +114,10 @@
                  <asp:TextBox runat="server" ID="TVseries3" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="TVseries3" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div> 
+    <div class="form-group">
+        <asp:Label runat="server" AssociatedControlID="Bio" CssClass="col-md-2 control-label" Text="Write something about yourself"></asp:Label>
+        <textarea id="Bio" cols="30" rows="3" runat="server" CssClass="form-control"></textarea>
+    </div>
  
      <div class="form-group">
          <div class="col-md-offset-2 col-md-10">
