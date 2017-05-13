@@ -64,7 +64,7 @@ namespace Tarkvaratehnika.Models
 
         public static void DoDictionaryWithLists()
         {
-            List<string> campaigner = new List<string>() { "Advocate", "Arhitect" };
+            List<string> campaigner = new List<string>() { "Advocate", "Architect" };
             List<string> defender = new List<string>() { "Entertainer", "Entrepreneur" };
             List<string> adventurer = new List<string>() { "Executive", "Consul" };
             List<string> logistician = new List<string>() { "Entrepreneur", "Entertainer" };

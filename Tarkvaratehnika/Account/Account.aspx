@@ -27,13 +27,18 @@
     <div class="form-horizontal">
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Welcome" ID="Welcome">Welcome, </asp:Label> <asp:Label runat="server" AssociatedControlID ="Username" ID="Username"></asp:Label>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SQL">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SQL" runat="server"></asp:SqlDataSource>
+            <br />
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT T.FirstName FROM Compatibilities AS C INNER JOIN Personalities AS FP ON C.from_personality = FP.Id INNER JOIN Personalities ON C.to_personality = Personalities.Id INNER JOIN Registration AS T ON Personalities.LongName = T.Personality INNER JOIN Registration AS F ON FP.LongName = F.Personality WHERE (F.Email = @user_email)">
+                <SelectParameters>
+                    <asp:SessionParameter DefaultValue="" Name="user_email" SessionField="name" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
         </div>
         <div class="form-group">
             <asp:Button runat="server" ID="LogOutButton" OnClick="LogOutButton_Click" Text="Logout" />
