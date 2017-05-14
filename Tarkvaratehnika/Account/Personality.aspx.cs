@@ -46,7 +46,7 @@ namespace Tarkvaratehnika.Account
                 cmd.Parameters.AddWithValue("u", Session["tv2"]);
                 cmd.Parameters.AddWithValue("v", Session["tv3"]);
                 cmd.Parameters.AddWithValue("w", Session["personality"]);
-                cmd.Parameters.AddWithValue("x", Session["bio"]);
+                cmd.Parameters.AddWithValue("x", Session["biography"]);
                 cmd.ExecuteNonQuery();
                 Session.RemoveAll();
 

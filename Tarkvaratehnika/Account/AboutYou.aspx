@@ -115,8 +115,10 @@
             </div>
      </div> 
     <div class="form-group">
-        <asp:Label runat="server" AssociatedControlID="Bio" CssClass="col-md-2 control-label" Text="Write something about yourself"></asp:Label>
-        <textarea cols="30" rows="3" runat="server" CssClass="form-control" id="bio"></textarea>
+        <asp:Label runat="server" AssociatedControlID="Biography" CssClass="col-md-2 control-label" Text="Write something about yourself!"></asp:Label>
+        <div class="col-md-10">
+            <asp:TextBox runat="server" ID="Biogr" CssClass="form-control" TextMode="MultiLine" Columns="30" Rows="3"></asp:TextBox>
+        </div>
     </div>
  
      <div class="form-group">
@@ -126,5 +128,5 @@
      </div>
 </div>
 
-    </div>
+    
 </asp:Content>
