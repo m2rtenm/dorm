@@ -116,7 +116,7 @@
      </div> 
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="Bio" CssClass="col-md-2 control-label" Text="Write something about yourself"></asp:Label>
-        <textarea id="Bio" cols="30" rows="3" runat="server" CssClass="form-control"></textarea>
+        <textarea cols="30" rows="3" runat="server" CssClass="form-control" id="bio"></textarea>
     </div>
  
      <div class="form-group">

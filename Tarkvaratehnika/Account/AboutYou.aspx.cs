@@ -30,6 +30,7 @@ namespace Tarkvaratehnika.Account
             Session["tv1"] = TVseries1.Text;
             Session["tv2"] = TVseries2.Text;
             Session["tv3"] = TVseries3.Text;
+            Session["bio"] = bio.Value;
             Response.Redirect("~/Account/Personality.aspx");
 
         }
