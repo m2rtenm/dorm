@@ -22,7 +22,7 @@ namespace Tarkvaratehnika.Account
                 Session["personality"] = PersonalityType.Text;
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Registration (Email, Password, UserName, FirstName, LastName, DateOfBirth, Citizenship, City, Gender, Relationship, DriverLicense, Cooking, Party, Music1, Music2, Music3, Movie1, Movie2, Movie3, TV1, TV2, TV3, Personality) values (@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k, @l, @m, @n, @o, @p, @q, @r, @s, @t, @u, @v, @w)", con);
+                SqlCommand cmd = new SqlCommand("insert into Registration (Email, Password, UserName, FirstName, LastName, DateOfBirth, Citizenship, City, Gender, Relationship, DriverLicense, Cooking, Party, Music1, Music2, Music3, Movie1, Movie2, Movie3, TV1, TV2, TV3, Personality, Bio) values (@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k, @l, @m, @n, @o, @p, @q, @r, @s, @t, @u, @v, @w, @x)", con);
                 cmd.Parameters.AddWithValue("a", Session["email"]);
                 cmd.Parameters.AddWithValue("b", Session["password"]);
                 cmd.Parameters.AddWithValue("c", Session["username"]);
@@ -46,6 +46,7 @@ namespace Tarkvaratehnika.Account
                 cmd.Parameters.AddWithValue("u", Session["tv2"]);
                 cmd.Parameters.AddWithValue("v", Session["tv3"]);
                 cmd.Parameters.AddWithValue("w", Session["personality"]);
+                cmd.Parameters.AddWithValue("x", Session["bio"]);
 
                 cmd.ExecuteNonQuery();
                 Session.RemoveAll();

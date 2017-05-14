@@ -114,7 +114,12 @@
                  <asp:TextBox runat="server" ID="TVseries3" CssClass="form-control" /><asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="TVseries3" ErrorMessage="Please fill in all the fields!"></asp:RequiredFieldValidator>
             </div>
      </div> 
- 
+     <div class="form-group">
+         <asp:Label runat="server" AssociatedControlID="Biography" CssClass="col-md-2 control-label" Text="Write something about yourself"></asp:Label>
+         <div class="col-md-10">
+             <asp:TextBox runat="server" ID="Biography" CssClass="form-control" TextMode="MultiLine" Rows="3" Columns="30" /> 
+         </div>
+     </div>
      <div class="form-group">
          <div class="col-md-offset-2 col-md-10">
                 <asp:Button ID="Button1" runat="server" Text="Next" OnClick="Button1_Click"/>
@@ -122,5 +127,5 @@
      </div>
 </div>
 
-    </div>
+    
 </asp:Content>
