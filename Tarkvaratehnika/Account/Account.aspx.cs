@@ -33,7 +33,7 @@ namespace Tarkvaratehnika.Account
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             IDfrom.Text = GridView1.SelectedRow.Cells[2].Text;
-            IDto.Text = GridView2.Rows[0].Cells[0].Text;
+            IDto.Text = GridView2.Rows[0].Cells[0].Text.ToString();
             
             /*
             int idTo = int.Parse(row.Cells[0].Text);
