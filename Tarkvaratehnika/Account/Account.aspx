@@ -51,6 +51,8 @@
                     <asp:SessionParameter DefaultValue="" Name="user_email" SessionField="name" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
+            <asp:Label runat="server" AssociatedControlID="IDfrom" ID="IDfrom" />
+            <asp:Label runat="server" AssociatedControlID="IDto" ID="IDto" />
         </div>
         <div class="form-group">
             <asp:Button runat="server" ID="LogOutButton" OnClick="LogOutButton_Click" Text="Logout" />

@@ -32,17 +32,20 @@ namespace Tarkvaratehnika.Account
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-                GridViewRow row = GridView1.SelectedRow;
-                int idTo = int.Parse(row.Cells[0].Text);
-                int idFrom = int.Parse(GridView2.Rows[0].Cells[0].Text);
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
-                con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Requests (FromID, ToID) values (@a, @b)", con);
-                cmd.Parameters.AddWithValue("a", idFrom);
-                cmd.Parameters.AddWithValue("b", idTo);
-                cmd.ExecuteNonQuery();
-                con.Close();
+            IDfrom.Text = GridView1.SelectedRow.Cells[2].Text;
+            IDto.Text = GridView2.Rows[0].Cells[0].Text;
             
+            /*
+            int idTo = int.Parse(row.Cells[0].Text);
+            int idFrom = int.Parse(GridView2.Rows[0].Cells[0].Text);
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into Requests (FromID, ToID) values (@a, @b)", con);
+            cmd.Parameters.AddWithValue("a", idFrom);
+            cmd.Parameters.AddWithValue("b", idTo);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            */
         }
     }
 }
