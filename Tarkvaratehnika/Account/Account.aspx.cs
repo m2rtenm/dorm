@@ -21,6 +21,7 @@ namespace Tarkvaratehnika.Account
             {
                 Response.Redirect("~/");
             }
+            
         }
 
         protected void LogOutButton_Click(object sender, EventArgs e)
@@ -29,27 +30,19 @@ namespace Tarkvaratehnika.Account
             Response.Redirect("~/");
         }
 
-        public void AlgoritmVoid()
-        {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT FirstName, Personality FROM Registration WHERE");
-        }
-
-        // The return type can be changed to IEnumerable, however to support
-        // paging and sorting, the following parameters must be added:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
-        public IQueryable GridView1_GetData()
-        {
-            return null;
-        }
-
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+                GridViewRow row = GridView1.SelectedRow;
+                int idTo = int.Parse(row.Cells[0].Text);
+                int idFrom = int.Parse(GridView2.Rows[0].Cells[0].Text);
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into Requests (FromID, ToID) values (@a, @b)", con);
+                cmd.Parameters.AddWithValue("a", idFrom);
+                cmd.Parameters.AddWithValue("b", idTo);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            
         }
     }
 }
