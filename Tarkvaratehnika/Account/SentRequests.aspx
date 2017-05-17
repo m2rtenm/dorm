@@ -17,7 +17,7 @@
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT Registration.FirstName, Registration.Personality
 FROM Registration
-INNER JOIN Requests ON Registration.ID = Requests.FromID
+INNER JOIN Requests ON Registration.ID = Requests.ToID
 WHERE
 (SELECT ID FROM Registration WHERE UserName = @user) = FromID">
         <SelectParameters>

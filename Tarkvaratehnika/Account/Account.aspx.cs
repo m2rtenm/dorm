@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Tarkvaratehnika.Models;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Tarkvaratehnika.Account
 {
@@ -21,7 +22,6 @@ namespace Tarkvaratehnika.Account
             {
                 Response.Redirect("~/");
             }
-            
         }
 
         protected void LogOutButton_Click(object sender, EventArgs e)
@@ -32,20 +32,15 @@ namespace Tarkvaratehnika.Account
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IDfrom.Text = GridView1.SelectedRow.Cells[2].Text;
-            IDto.Text = GridView2.Rows[0].Cells[0].Text.ToString();
-            
-            /*
-            int idTo = int.Parse(row.Cells[0].Text);
-            int idFrom = int.Parse(GridView2.Rows[0].Cells[0].Text);
+            string emailTo = GridView1.SelectedRow.Cells[0].Text;
+            string emailFrom = GridView2.Rows[0].Cells[0].Text;
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DormMatch.mdf;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Requests (FromID, ToID) values (@a, @b)", con);
-            cmd.Parameters.AddWithValue("a", idFrom);
-            cmd.Parameters.AddWithValue("b", idTo);
-            cmd.ExecuteNonQuery();
+            SqlCommand com = new SqlCommand("INSERT INTO Requests (FromID, ToID) VALUES (@a, @b)", con);
+            com.Parameters.AddWithValue("a", emailFrom);
+            com.Parameters.AddWithValue("b", emailTo);
+            com.ExecuteNonQuery();
             con.Close();
-            */
         }
     }
 }

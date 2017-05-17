@@ -26,40 +26,44 @@
     </div>
     <div class="form-horizontal">
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Welcome" ID="Welcome">Welcome, </asp:Label> <asp:Label runat="server" AssociatedControlID ="Username" ID="Username"></asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Welcome" ID="Welcome">Welcome, </asp:Label> <asp:Label runat="server" AssociatedControlID ="Username" ID="Username"></asp:Label><asp:Label runat="server" ID="matching" AssociatedControlID="matching">! These asre people who have a matching personality with you!</asp:Label> 
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="FirstName" HeaderText="First name" SortExpression="FirstName" />
+
+                    <asp:BoundField DataField="Personality" HeaderText="Personality" SortExpression="Personality" />
                     <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                    <asp:BoundField DataField="City" HeaderText="City of origin" SortExpression="City" />
+                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="Relationship" HeaderText="Relationship" SortExpression="Relationship" />
                     <asp:BoundField DataField="Music1" HeaderText="The most favourite music artist" SortExpression="Music1" />
                     <asp:BoundField DataField="Movie1" HeaderText="The most favourite movie" SortExpression="Movie1" />
+
                     <asp:BoundField DataField="TV1" HeaderText="The most favourite TV show" SortExpression="TV1" />
 
                 </Columns>
             </asp:GridView>
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource2">
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" RowStyle-BackColor="White" AlternatingRowStyle-BorderStyle="None">
+<AlternatingRowStyle BorderStyle="None"></AlternatingRowStyle>
                 <Columns>
-                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" Visible="False" />
                 </Columns>
+
+<RowStyle BackColor="White"></RowStyle>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT [ID] FROM [Registration] WHERE ([UserName] = @UserName)">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT [Email] FROM [Registration] WHERE ([UserName] = @UserName)">
                 <SelectParameters>
                     <asp:SessionParameter Name="UserName" SessionField="name" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT T.FirstName, T.ID, T.Gender, T.City, T.Relationship, T.Music1, T.Movie1, T.TV1 FROM Compatibilities AS C INNER JOIN Personalities AS FP ON C.from_personality = FP.Id INNER JOIN Personalities ON C.to_personality = Personalities.Id INNER JOIN Registration AS T ON Personalities.LongName = T.Personality INNER JOIN Registration AS F ON FP.LongName = F.Personality WHERE (F.Email = @user_email)">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT T.FirstName, T.Personality, T.Email, T.Gender, T.City, T.Relationship, T.Music1, T.Movie1, T.TV1 FROM Compatibilities AS C INNER JOIN Personalities AS FP ON C.from_personality = FP.Id INNER JOIN Personalities ON C.to_personality = Personalities.Id INNER JOIN Registration AS T ON Personalities.LongName = T.Personality INNER JOIN Registration AS F ON FP.LongName = F.Personality WHERE (F.Email = @user_email)">
                 <SelectParameters>
                     <asp:SessionParameter DefaultValue="" Name="user_email" SessionField="name" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <asp:Label runat="server" AssociatedControlID="IDfrom" ID="IDfrom" />
-            <asp:Label runat="server" AssociatedControlID="IDto" ID="IDto" />
+            
         </div>
         <div class="form-group">
             <asp:Button runat="server" ID="LogOutButton" OnClick="LogOutButton_Click" Text="Logout" />

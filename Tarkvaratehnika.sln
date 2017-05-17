@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tarkvaratehnika", "Tarkvaratehnika\Tarkvaratehnika.csproj", "{B920C0EA-1F64-4B7F-8F96-02D573E3E0F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tarkvaratehnika.Tests", "Tarkvaratehnika.Tests\Tarkvaratehnika.Tests.csproj", "{20138D5B-D054-471A-95C1-BFBB441C7DCD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B920C0EA-1F64-4B7F-8F96-02D573E3E0F4} = {B920C0EA-1F64-4B7F-8F96-02D573E3E0F4}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

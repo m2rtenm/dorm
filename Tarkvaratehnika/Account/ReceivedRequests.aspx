@@ -12,13 +12,14 @@
     <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
         <Columns>
-            <asp:BoundField DataField="FirstName" HeaderText="You have received a request from" SortExpression="FirstName" />
-            <asp:BoundField DataField="Personality" HeaderText=" Their personality" SortExpression="Personality" />
+            <asp:BoundField DataField="FirstName" HeaderText="People who have sent a request to you" SortExpression="FirstName" />
+            <asp:BoundField DataField="Personality" HeaderText="Personality" SortExpression="Personality" />
+            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT Registration.FirstName, Registration.Personality 
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DormMatchConnectionString %>" SelectCommand="SELECT Registration.FirstName, Registration.Personality, Registration.Email 
 FROM Registration
-  INNER JOIN Requests ON Registration.ID = Requests.ToID
+  INNER JOIN Requests ON Registration.ID = Requests.FromID
 WHERE
  (SELECT ID FROM Registration WHERE UserName = @user) = ToID">
         <SelectParameters>
